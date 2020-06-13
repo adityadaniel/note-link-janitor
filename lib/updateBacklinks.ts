@@ -73,7 +73,7 @@ export default function updateBacklinks(
         }
       ]
     };
-    backlinksString = `---\n## Backlinks\n${backlinks
+    backlinksString = `## Backlinks\n${backlinks
       .map(
         entry =>
           `* [[${entry.sourceTitle}]]\n${entry.context
@@ -87,6 +87,7 @@ export default function updateBacklinks(
 
   const newNoteContents =
     noteContents.slice(0, insertionOffset) +
+    `---\n` +
     backlinksString +
     noteContents.slice(oldEndOffset);
 
