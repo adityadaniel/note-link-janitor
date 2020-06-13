@@ -87,7 +87,6 @@ export default function updateBacklinks(
 
   const newNoteContents =
     noteContents.slice(0, insertionOffset) +
-    `---\n` +
     backlinksString +
     noteContents.slice(oldEndOffset);
 
